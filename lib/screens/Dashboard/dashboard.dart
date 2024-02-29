@@ -378,73 +378,99 @@ class DashboardPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 20.0),
-                    child: SizedBox(
-                      height: 170,
-                      width: fullWidth(context),
-                      child: ListView.builder(
-                        scrollDirection: Axis.horizontal,
-                        itemCount: 5,
-                        itemBuilder: (context, index) {
-                          double left = 20;
-                          if (index == 0) {
-                            left = 40;
-                          }
-                          return Padding(
-                            padding: EdgeInsets.only(left: left, bottom: 10),
-                            child: Container(
-                                width: 120,
-                                decoration: BoxDecoration(
-                                    color: Warna.white,
-                                    borderRadius: BorderRadius.circular(10),
-                                    boxShadow: [customBoxShadowBtn()]),
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      ImageLoc.wahana,
-                                      fit: BoxFit.fill,
-                                      width: 120,
-                                    ),
-                                    Container(
-                                      color: Warna.white,
-                                      child: Column(
-                                        children: [
-                                          customText("Ancol Entrance Gate",
-                                              fontSize: 11),
-                                          Padding(
-                                            padding: const EdgeInsets.only(
-                                                right: 8.0),
-                                            child: Align(
-                                                alignment: Alignment.topRight,
-                                                child: Container(
-                                                    decoration: BoxDecoration(
-                                                        gradient:
-                                                            customLinearGradient(),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(100)),
-                                                    child: Padding(
-                                                      padding: const EdgeInsets
-                                                          .symmetric(
-                                                          vertical: 2.0,
-                                                          horizontal: 4),
-                                                      child: customText(
-                                                          "Detail",
-                                                          fontSize: 10,
-                                                          textColor:
-                                                              Warna.white,
-                                                          fontWeight: FontWeight
-                                                              .normal),
-                                                    ))),
+                    padding: const EdgeInsets.only(top: 20.0, left: 20),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 20.0),
+                          child: Column(
+                            children: [
+                              customText("Did You ", fontSize: 16),
+                              customText("Know?", fontSize: 16),
+                              Image.asset(ImageLoc.mapSlide)
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 210,
+                          width: fullWidth(context) - 110,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 5,
+                            itemBuilder: (context, index) {
+                              double left = 20;
+                              if (index == 0) {
+                                left = 10;
+                              }
+                              return Padding(
+                                padding:
+                                    EdgeInsets.only(left: left, bottom: 10),
+                                child: Container(
+                                    width: 160,
+                                    decoration: BoxDecoration(
+                                        color: Warna.white,
+                                        borderRadius: BorderRadius.circular(10),
+                                        boxShadow: [customBoxShadowBtn()]),
+                                    child: Column(
+                                      children: [
+                                        Image.asset(
+                                          ImageLoc.wahana,
+                                          fit: BoxFit.fill,
+                                          width: 160,
+                                        ),
+                                        Container(
+                                         decoration: BoxDecoration(
+                                           color: Warna.white,
+                                           borderRadius: BorderRadius.circular(10)
+                                         ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(bottom:8.0),
+                                            child: Column(
+                                              children: [
+                                                customText("Ancol Entrance Gate",
+                                                    fontSize: 11),
+                                                Padding(
+                                                  padding: const EdgeInsets.only(
+                                                      right: 8.0),
+                                                  child: Align(
+                                                      alignment:
+                                                          Alignment.topRight,
+                                                      child: Container(
+                                                          decoration: BoxDecoration(
+                                                              gradient:
+                                                                  customLinearGradient(),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          100)),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .symmetric(
+                                                                    vertical: 2.0,
+                                                                    horizontal:
+                                                                        4),
+                                                            child: customText(
+                                                                "Detail",
+                                                                fontSize: 10,
+                                                                textColor:
+                                                                    Warna.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal),
+                                                          ))),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                )),
-                          );
-                        },
-                      ),
+                                        ),
+                                      ],
+                                    )),
+                              );
+                            },
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Padding(

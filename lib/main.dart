@@ -1,4 +1,3 @@
-import 'package:bdki/service/auth_service.dart';
 import 'package:bdki/service/routing_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';

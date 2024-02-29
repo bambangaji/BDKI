@@ -35,9 +35,12 @@ class LoginPage extends StatefulWidget {
       return showToastError();
     }
     showLoading(context);
-    resetFormLogin();
-    saveLogin("Guest");
-    hideLoading(context);
+    Future.delayed(Duration(seconds: 2), () {
+      resetFormLogin();
+      saveLogin("Guest");
+      goToDashboard(context);
+      hideLoading(context);
+    });
   }
 
   resetFormLogin() {
@@ -190,7 +193,7 @@ class _LoginPageState extends State<LoginPage> {
                               child: Column(
                                 children: [
                                   GestureDetector(
-                                    onTap: () => goToDashboard(context),
+                                    onTap: () => widget.doLogin(context),
                                     child: Container(
                                       width: fullWidth(context),
                                       decoration: BoxDecoration(

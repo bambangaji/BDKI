@@ -36,5 +36,5 @@ showLoading(BuildContext context) {
 }
 
 void hideLoading(BuildContext context) {
-  Navigator.popUntil(context, ModalRoute.withName('/'));
+  Navigator.pop(context);
 }
