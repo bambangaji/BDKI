@@ -226,8 +226,8 @@ class DashboardPage extends StatelessWidget {
                                   child: Image.asset(
                                     ImageLoc.maps,
                                     fit: BoxFit.contain,
-                                    height: 50,
-                                    width: 55,
+                                    height: 45,
+                                    width: 50,
                                   ),
                                 ),
                               ),
@@ -250,8 +250,8 @@ class DashboardPage extends StatelessWidget {
                                   child: Image.asset(
                                     ImageLoc.walletIcon,
                                     fit: BoxFit.contain,
-                                    height: 50,
-                                    width: 55,
+                                    height: 45,
+                                    width: 50,
                                   ),
                                 ),
                               ),
@@ -274,8 +274,8 @@ class DashboardPage extends StatelessWidget {
                                   child: Image.asset(
                                     ImageLoc.creditCards,
                                     fit: BoxFit.contain,
-                                    height: 50,
-                                    width: 55,
+                                    height: 45,
+                                    width: 50,
                                   ),
                                 ),
                               ),
@@ -298,8 +298,8 @@ class DashboardPage extends StatelessWidget {
                                   child: Image.asset(
                                     ImageLoc.event,
                                     fit: BoxFit.contain,
-                                    height: 50,
-                                    width: 55,
+                                    height: 45,
+                                    width: 50,
                                   ),
                                 ),
                               ),

@@ -1,3 +1,4 @@
+import 'package:bdki/service/auth_service.dart';
 import 'package:bdki/service/routing_service.dart';
 import 'package:bdki/utils/ImageLoc.dart';
 import 'package:bdki/utils/color_custom.dart';
@@ -35,6 +36,7 @@ class LoginPage extends StatefulWidget {
     }
     showLoading(context);
     resetFormLogin();
+    saveLogin("Guest");
     hideLoading(context);
   }
 

@@ -1,20 +1,26 @@
+import 'package:bdki/service/routing_service.dart';
 import 'package:bdki/service/storage_service.dart';
+import 'package:flutter/material.dart';
 
-saveLogin(String userToken, String refressToken, String emailUser,
-    String role) async {
+saveLogin(String nameUser) async {
   SecureStorage secureStorage = SecureStorage();
-  await secureStorage.writeSecureData("userToken", userToken);
-  await secureStorage.writeSecureData("nameUser", refressToken);
-  await secureStorage.writeSecureData("emailUser", emailUser);
-  await secureStorage.writeSecureData("roleUser", role);
+  await secureStorage.writeSecureData("name", nameUser);
   await secureStorage.writeSecureData("login", 'true');
 }
 
 logOut() async {
   print("logout");
   SecureStorage secureStorage = SecureStorage();
-  secureStorage.writeSecureData("userToken", '');
-  secureStorage.writeSecureData("nameUser", '');
-  secureStorage.writeSecureData("emailUser", '');
+  secureStorage.writeSecureData("name", '');
   secureStorage.writeSecureData("login", 'false');
+}
+
+checkLogin(BuildContext context) {
+  print("logout");
+  SecureStorage secureStorage = SecureStorage();
+  secureStorage.readSecureData("login").then((value) {
+    if (value == 'true') {
+      goToDashboard(context);
+    }
+  });
 }
